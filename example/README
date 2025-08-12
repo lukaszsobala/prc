@@ -1,0 +1,31 @@
+The files in this directory were produced as follows:
+
+1plc.fa, 1auz.fa:
+	FASTA sequences taken from http://www.rcsb.org
+
+0042368.mod, 0035218.mod:
+	SUPERFAMILY HMMs taken from http://supfam.org
+
+0042368-1plc.a2m:
+	hmmscore 0042368-1plc -i 0042368.mod -db 1plc.fa \
+		-sw 2 -dpstyle 0 -adpstyle 5 -select_align 8
+
+0035218-1auz.a2m:
+	hmmscore 0035218-1auz -i 0035218.mod -db 1auz.fa \
+		-sw 2 -dpstyle 0 -adpstyle 5 -select_align 8
+
+0042368-0035218.out:
+	prc -hits 1 -align prc 0042368.mod 0035218.mod \
+		> 0042368-0035218.out
+
+1plc-1auz.a2m:
+	merge_aligns.pl 0042368-0035218.out \
+		0042368-1plc.a2m 0035218-1auz.a2m > 1plc-1auz.a2m
+
+
+When creating SAM alignments, particularly between an HMM and its seed 
+sequence, a global alignment (-sw 0) may be preferable in some cases.
+
+To obtain SAM, please go to:
+
+http://www.cse.ucsc.edu/compbio/sam2src/

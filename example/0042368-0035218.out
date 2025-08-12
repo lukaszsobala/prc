@@ -1,0 +1,20 @@
+PRC 1.5.5 (PLAN9, SPACE5, ALL_TRANS), compiled on Aug 27 2008
+Copyright (C) 2002-5 Martin Madera and MRC LMB, Cambridge, UK
+Freely distributed under the GNU General Public License
+
+Command     : ../prc-1.5.5-linux-i686 -hits 1 -align prc 0042368.mod 0035218.mod 
+Algorithm   : forward/backward
+Match-match : dot2
+Align mode  : local-local
+Alignments  : prc
+Simple stop : 1.5
+Max hits    : 1
+Started     : Wed Aug 27 21:46:52 2008
+
+# hmm1	start1	end1	length1	hit_no	hmm2	start2	end2	length2	co-emis	simple	reverse
+0042368	22	83	99	1	0035218	8	99	116	  12.9	   8.5	   0.5
+
+MMMMMMMMMMMMMMMIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+# END
