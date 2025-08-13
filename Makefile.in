@@ -34,12 +34,12 @@ clean: \
 
 prc: \
 	HMM.o DP_common.o prc.o match.o region.o stats.o $(OBJ_SRCH) $(OBJ_TR)
-	$(CC) $(LIBS) HMM.o DP_common.o prc.o match.o region.o stats.o \
-	$(OBJ_SRCH) $(OBJ_TR) -o prc
+	$(CC) HMM.o DP_common.o prc.o match.o region.o stats.o \
+	$(OBJ_SRCH) $(OBJ_TR) $(LIBS) -o prc
 
 convert_to_prc: \
 	HMM.o convert_to_prc.o
-	$(CC) $(LIBS) HMM.o convert_to_prc.o -o convert_to_prc
+	$(CC) HMM.o convert_to_prc.o $(LIBS) -o convert_to_prc
 
 HMM.o: \
 	HMM.c prc.h

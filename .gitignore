@@ -1,0 +1,5 @@
+*.o
+prc
+convert_to_prc
+*.cache*
+*.cache

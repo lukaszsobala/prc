@@ -36,7 +36,7 @@ if test "${GCC}" != "yes" ; then
                ;;
     esac
 else
-    CFLAGS="-O3 -Wall -Werror"
+    CFLAGS="-O3 -Wall"
     case "${host}" in
           alpha* )
 	       CFLAGS="${CFLAGS} -mieee"
