@@ -3,3 +3,9 @@ prc
 convert_to_prc
 *.cache*
 *.cache
+*.log
+*.tmp
+*.status
+*.backup
+*transitions.txt
+Makefile
